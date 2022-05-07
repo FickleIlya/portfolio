@@ -16,3 +16,7 @@ def homepage(request):
         'projects': projects,
     }
     return render(request, 'portfolio_templates/homepage.html', context=context)
+
+
+def linkedin(request):
+    return render(request, 'portfolio_templates/linkedin.html')

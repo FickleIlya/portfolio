@@ -8,8 +8,8 @@ app_name = 'portfolio'
 
 urlpatterns = [
 
-    path('', views.homepage, name='home')
-
+    path('', views.homepage, name='home'),
+    path('linkedin/', views.linkedin, name='linkedin')
 
 ]
 

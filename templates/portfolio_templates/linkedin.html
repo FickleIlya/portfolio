@@ -1,0 +1,22 @@
+{% extends 'portfolio_templates/base.html' %}
+
+{% block head %}
+
+<title>LinkedIn</title>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">
+        Sorry, but i don't have LinkedIn :(
+    </h1>
+  </div>
+</div>
+<div class="text-center">
+    {% load static %}
+    <img src="{% static 'portfolio/cat.jpg' %}" height="750" width="750">
+</div>
+{% endblock %}
