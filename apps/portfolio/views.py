@@ -3,7 +3,6 @@ from .models import Project
 import datetime as dt
 
 
-# Create your views here.
 def homepage(request):
     projects = Project.objects.all()
     today = dt.date.today()
