@@ -129,6 +129,8 @@ dmypy.json
 .pyre/
 .idea
 
+# local settings
+.local_settings.py
 #etc
 
 !.gitignore
