@@ -19,3 +19,7 @@ def homepage(request):
 
 def linkedin(request):
     return render(request, 'portfolio_templates/linkedin.html')
+
+
+def contacts(request):
+    return render(request, 'portfolio_templates/contacts.html')
