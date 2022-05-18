@@ -24,9 +24,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'django-insecure-_1y_rf@hrojys!=93$o)42^t#satkod_g(#(se)-bj3(^q32_-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fickleilya.pythonanywhere.com"]
 
 
 # Application definition
