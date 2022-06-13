@@ -7,10 +7,10 @@ from portfolio.models import Project
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        fields = ('title', 'date')
+        fields = ('id', 'title', 'date')
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ('title', 'url')
+        fields = ('id', 'title', 'url')

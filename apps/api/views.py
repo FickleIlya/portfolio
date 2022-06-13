@@ -1,27 +1,25 @@
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework import viewsets
 
+from api.permissions import IsAdminOrReadOnly
 from api.serializers import ProjectSerializer, BlogSerializer
+
 from blog.models import Blog
 from portfolio.models import Project
 
 
-class ProjectAPIListCreate(ListCreateAPIView):
-    queryset = Project.objects.all()
+class ProjectViewSet(viewsets.ModelViewSet):
+
     serializer_class = ProjectSerializer
+    permission_classes = (IsAdminOrReadOnly, )
+
+    def get_queryset(self):
+        return Project.objects.all()
 
 
-class ProjectAPIRCD(RetrieveUpdateDestroyAPIView):
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+class BlogViewSet(viewsets.ModelViewSet):
 
-
-class BlogAPIListCreate(ListCreateAPIView):
-    queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+    permission_classes = (IsAdminOrReadOnly, )
 
-
-class BlogAPIRCD(RetrieveUpdateDestroyAPIView):
-    queryset = Blog.objects.all()
-    serializer_class = BlogSerializer
+    def get_queryset(self):
+        return Blog.objects.all()

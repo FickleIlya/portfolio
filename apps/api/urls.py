@@ -1,15 +1,14 @@
-from django.urls import path
-
 from api.views import *
+from rest_framework import routers
 
-urlpatterns = [
+router = routers.SimpleRouter()
 
-    # API blogs
-    path('bloglist/', BlogAPIListCreate.as_view()),
-    path('bloglist/<int:pk>', BlogAPIRCD.as_view()),
+# API Projects
+router.register(r'projectlist', ProjectViewSet, basename='projects')
 
-    # API projects
-    path('projectlist/', ProjectAPIListCreate.as_view()),
-    path('projectlist/<int:pk>', ProjectAPIRCD.as_view()),
+# API Blogs
+router.register(r'bloglist', BlogViewSet, basename='blogs')
 
-]
+
+urlpatterns = router.urls
+
