@@ -1,14 +1,21 @@
 {% extends 'portfolio_templates/base.html' %}
 
 {% block head %}
-    <title>Blog</title>
+    <title>Blogs</title>
 {% endblock %}
 
 {% block content %}
 
 <h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
 <h3 class="text-center mb-5">I have {{ blogs.count }} blog{{ blogs.count|pluralize }}!</h3>
+{% if user.is_staff %}
+<div class="text-center">
+    <a role="button" class="btn btn-primary btn-center " href="{% url 'blog:create_blog' %}">
+        New blog
+    </a>
+</div>
 
+{% endif %}
     {% for blog in blogs %}
         <div class="row justify-content-center my-3">
             <div class="col-md-10">

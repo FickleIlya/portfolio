@@ -2,17 +2,29 @@
 {% block head %}
     <title>{{ blog.title }}</title>
     <style>
-       .word {
-        width: 1500px;
+       .text {
+        width: 1550px;
         padding: 10px;
         font-size: 20px;
         word-break: break-all;
+       }
+       .btn {
+        padding:5px;
+        width: 100px;
+        margin-left: 20px;
        }
    </style>
 {% endblock %}
 
 {% block content %}
+<div class = "body">
     <h1 id="blogtitle" class="font-weight-bold text-center">{{ blog.title }}</h1>
     <h2 class="text-center mb-5 text-muted">{{ blog.date|date:'F jS Y' }}</h2>
-    <p class="word">{{ blog.text|safe }}</p>
+    <p class="text">{{ blog.text|safe }}</p>
+    
+    {% if user.is_staff %}
+    <a role="button" class="btn btn-primary" href="{% url 'blog:change_blog' blog.id%}">Change</a>
+    {% endif %}
+</div>
+
 {% endblock %}
