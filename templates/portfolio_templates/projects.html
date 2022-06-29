@@ -1,0 +1,31 @@
+{% extends 'portfolio_templates/base.html' %}
+
+{% block head %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styleprojects.css' %}">
+<title>Projects</title>
+
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <section>
+        {% for project in projects %}
+
+        <article>
+
+            {% if project.url %}
+                <a href="{{ project.url }}">{{ project.title }}</a>
+            {% else %}
+                {{ project.title }}
+            {% endif %}
+            <p>{{ project.description }}</p>
+        </article>
+        {% endfor %}
+    </section>
+</main>
+
+{% endblock %}
+

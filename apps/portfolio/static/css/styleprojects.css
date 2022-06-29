@@ -1,0 +1,24 @@
+article{
+    padding: 70px 120px;
+}
+
+article p{
+    color: #517676;
+}
+
+main a{
+    font-size: 1.5rem;
+    color: #517676;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+main a:hover {
+    text-decoration: none;
+    color: #517676;
+}
+
+main a:link {
+    color: #517676;
+}

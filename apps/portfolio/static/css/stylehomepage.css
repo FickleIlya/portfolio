@@ -1,0 +1,42 @@
+h1{
+    color: #FFFFFF;
+}
+img{
+  border: 1px solid #FFFFFF;
+  min-width: 268px;
+}
+
+.me-img{
+  padding-bottom: 10px;
+}
+.btn-resume{
+    background-color: #99CCCC;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 20px 60px;
+    display: inline-flex;
+    font-size: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    text-decoration: none;
+    flex-wrap: nowrap;
+}
+
+.btn-resume:hover{
+    background-color: #85B1B1;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn-resume:focus{
+    outline: none;
+}
+
+.btn-resume:link{
+    text-decoration: none;
+    color: #FFFFFF;
+}

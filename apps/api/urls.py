@@ -4,10 +4,7 @@ from rest_framework import routers
 router = routers.SimpleRouter()
 
 # API Projects
-router.register(r'projectlist', ProjectViewSet, basename='projects')
-
-# API Blogs
-router.register(r'bloglist', BlogViewSet, basename='blogs')
+router.register(r'projects', ProjectViewSet, basename='projects')
 
 
 urlpatterns = router.urls
