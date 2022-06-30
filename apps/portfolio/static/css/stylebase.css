@@ -7,29 +7,12 @@ html, body{
     margin-right: 20px;
 }
 
-nav{
-    height: 100px;
+.navbar-set{
     border-bottom: 1px solid #FFFFFF;
-    display: flex;
-    flex-wrap: nowrap;
+    color: #99CCCC;
+
 }
 
-ul{
-    list-style-type: none;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    align-items:center;
-    flex-wrap: nowrap;
-    
-}
-li{
-    color: #FFFFFF;
-    font-size: 1.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 4px;
-}
 header a{
     color: #FFFFFF;
     text-decoration: none;

@@ -14,14 +14,14 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm navbar-dark navbar-toggler-border" aria-label="Third navbar example">
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-set" aria-label="Third navbar example">
         <div class="container-fluid">
           <a class="navbar-brand brand" href="{% url 'portfolio:home' %}">Ilya Berezenko</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbartogglecontent" aria-controls="navbartogglecontent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarsExample03">
+          <div class="collapse navbar-collapse" id="navbartogglecontent">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'portfolio:projects' %}">Projects</a>
@@ -35,5 +35,7 @@
       </nav>
   </header>
 {% block content %}{% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
