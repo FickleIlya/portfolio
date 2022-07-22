@@ -1,19 +1,25 @@
-from django.shortcuts import render
+from django.views.generic import ListView, TemplateView
+
 from .models import Project
 
 
-def homepage(request):
-    return render(request, 'portfolio_templates/homepage.html')
+class HomepageView(TemplateView):
+    template_name = "portfolio_templates/homepage.html"
 
 
-def projects(request):
-    projects = Project.objects.all()
+class ProjectsListView(ListView):
+    model = Project
+    template_name = "portfolio_templates/projects.html"
+    context_object_name = "projects"
 
-    context = {
-        'projects': projects,
-    }
-    return render(request, 'portfolio_templates/projects.html', context=context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get_queryset(self):
+        return Project.objects.all()
 
 
-def contacts(request):
-    return render(request, 'portfolio_templates/contacts.html')
+class ContactView(TemplateView):
+    template_name = "portfolio_templates/contacts.html"
