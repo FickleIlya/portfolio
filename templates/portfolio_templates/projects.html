@@ -17,7 +17,7 @@
         <article>
 
             {% if project.url %}
-                <a href="{{ project.url }}">{{ project.title }}</a>
+                <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
             {% else %}
                 {{ project.title }}
             {% endif %}
