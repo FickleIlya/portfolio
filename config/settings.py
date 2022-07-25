@@ -147,34 +147,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-# logging
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'main_format': {
-            'format': '{levelname} {asctime} {module} {filename} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'WARNING',
-            'class': 'logging.FileHandler',
-            'formatter': 'main_format',
-            'filename': 'info.log',
-        },
-    },
-    'loggers': {
-        'main': {
-            'handlers': ['file'],
-            'level': 'WARNING',
-            'propagate': True,
-        },
-    },
-}
-
 try:
     from .local_settings import *
 except ImportError:
